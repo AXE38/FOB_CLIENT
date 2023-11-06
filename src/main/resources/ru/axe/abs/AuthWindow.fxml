@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="171.0"
+            prefWidth="294.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="ru.axe.abs.AuthWindow">
+   <Label layoutX="14.0" layoutY="22.0" text="Сервер">
+      <font>
+         <Font size="14.0"/>
+      </font>
+   </Label>
+   <Label layoutX="14.0" layoutY="55.0" text="Логин">
+      <font>
+         <Font size="14.0"/>
+      </font>
+   </Label>
+   <Label layoutX="14.0" layoutY="89.0" text="Пароль">
+      <font>
+         <Font size="14.0"/>
+      </font>
+   </Label>
+   <ComboBox fx:id="t_server" layoutX="81.0" layoutY="19.0" prefHeight="25.0" prefWidth="196.0"/>
+   <TextField fx:id="t_login" layoutX="82.0" layoutY="52.0" prefHeight="25.0" prefWidth="196.0"/>
+   <Button fx:id="btn_ok" layoutX="210.0" layoutY="121.0" mnemonicParsing="false" onAction="#onOKBtnClick"
+           prefHeight="30.0" prefWidth="67.0" text="ОК">
+      <font>
+         <Font size="14.0"/>
+      </font>
+   </Button>
+   <Button layoutX="135.0" layoutY="121.0" mnemonicParsing="false" onAction="#onCancelBtnClick" text="Отмена">
+      <font>
+         <Font size="14.0"/>
+      </font>
+   </Button>
+   <PasswordField fx:id="t_pass" layoutX="81.0" layoutY="87.0" onMouseClicked="#onTPassClick" prefHeight="25.0"
+                  prefWidth="196.0"/>
+</AnchorPane>

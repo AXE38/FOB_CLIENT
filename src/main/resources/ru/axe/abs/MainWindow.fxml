@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768"
+            prefWidth="1024" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="ru.axe.abs.MainWindow">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
+    <MenuBar>
+        <Menu mnemonicParsing="false" text="Управление">
+            <MenuItem mnemonicParsing="false" text="Выйти"/>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Фильтр">
+            <MenuItem mnemonicParsing="false" onAction="#onFilterClick" text="Применить"/>
+        </Menu>
+        <Menu fx:id="menuOpers" mnemonicParsing="false" text="Операции">
+            <MenuItem mnemonicParsing="false" onAction="#onAddClick" text="Добавить"/>
+            <MenuItem mnemonicParsing="false" onAction="#onEditClick" text="Изменить"/>
+            <MenuItem mnemonicParsing="false" onAction="#onDeleteClick" text="Удалить"/>
+            <MenuItem mnemonicParsing="false" onAction="#onOpenAccClick" text="Выдать кредит"/>
+            <MenuItem mnemonicParsing="false" text="Просмотреть график платежей"/>
+            <Menu mnemonicParsing="false" text="Отчеты">
+                <MenuItem mnemonicParsing="false" text="Кредиты клиента"/>
+                <MenuItem mnemonicParsing="false" text="График платежей"/>
+            </Menu>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Помощь">
+            <MenuItem mnemonicParsing="false" onAction="#onAboutClick" text="О программе"/>
+        </Menu>
+    </MenuBar>
+    <TabPane fx:id="tabPane" layoutX="14.0" layoutY="25.0" prefHeight="724.0" prefWidth="996.0"
+             tabClosingPolicy="UNAVAILABLE">
+        <Tab fx:id="tabClient" text="Клиенты">
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                <TableView fx:id="tb_client" layoutX="14.0" layoutY="14.0" onMouseClicked="#onTblClick"
+                           prefHeight="625.0" prefWidth="967.0">
+
+                </TableView>
+            </AnchorPane>
+        </Tab>
+        <Tab fx:id="tabAccount" text="Кредиты">
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                <TableView fx:id="tb_account" layoutX="14.0" layoutY="14.0" onMouseClicked="#onTblClick"
+                           prefHeight="625.0" prefWidth="967.0"/>
+            </AnchorPane>
+        </Tab>
+        <Tab fx:id="tabAccountPlan" text="График платежей">
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                <TableView layoutX="14.0" layoutY="14.0" prefHeight="625.0" prefWidth="967.0">
+                    <columns>
+                        <TableColumn prefWidth="75.0" text="C1"/>
+                        <TableColumn prefWidth="75.0" text="C2"/>
+                    </columns>
+                </TableView>
+            </AnchorPane>
+        </Tab>
+        <Tab fx:id="tabAbsUser" text="Пользователи">
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                <TableView layoutX="14.0" layoutY="14.0" prefHeight="625.0" prefWidth="967.0">
+                    <columns>
+                        <TableColumn prefWidth="75.0" text="C1"/>
+                        <TableColumn prefWidth="75.0" text="C2"/>
+                    </columns>
+                </TableView>
+            </AnchorPane>
+        </Tab>
+        <Tab fx:id="tabEtlClient" text="История изменения клиентов">
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                <TableView layoutX="14.0" layoutY="14.0" prefHeight="625.0" prefWidth="967.0">
+                    <columns>
+                        <TableColumn prefWidth="75.0" text="C1"/>
+                        <TableColumn prefWidth="75.0" text="C2"/>
+                    </columns>
+                </TableView>
+            </AnchorPane>
+        </Tab>
+        <Tab fx:id="tabEtlAccount" text="История изменения кредитов">
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                <TableView layoutX="14.0" layoutY="14.0" prefHeight="625.0" prefWidth="967.0">
+                    <columns>
+                        <TableColumn prefWidth="75.0" text="C1"/>
+                        <TableColumn prefWidth="75.0" text="C2"/>
+                    </columns>
+                </TableView>
+            </AnchorPane>
+        </Tab>
+        <Tab fx:id="tabEtlAccountPlan" text="История изменения графиков платежей">
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                <TableView layoutX="14.0" layoutY="14.0" prefHeight="625.0" prefWidth="967.0">
+                    <columns>
+                        <TableColumn prefWidth="75.0" text="C1"/>
+                        <TableColumn prefWidth="75.0" text="C2"/>
+                    </columns>
+                </TableView>
+            </AnchorPane>
+        </Tab>
+    </TabPane>
+</AnchorPane>

@@ -1,0 +1,3 @@
+#FilterIcon > .label {
+    -fx-graphic: url('./images/filter.png');
+}
